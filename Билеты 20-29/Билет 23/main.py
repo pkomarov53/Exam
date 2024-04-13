@@ -3,13 +3,13 @@ import numpy as np
 
 
 def plot_function(a, b, c, step):
-    x = np.arange(0, 1, step)
-    y = a * np.tan(b * x) + c
+    x = np.arange(0.01, 0.99, step)  # Изменен диапазон значений x
+    y = a * (1 / np.tan(b * x)) + c
 
     plt.plot(x, y)
     plt.xlabel('X')
     plt.ylabel('Y')
-    plt.title('График функции y = {} * tan({} * x) + {}'.format(a, b, c))
+    plt.title('График функции y = {} * ctg({} * x) + {}'.format(a, b, c))
     plt.grid(True)
     plt.show()
 

@@ -18,7 +18,6 @@ def read_file():
             messagebox.showerror("Ошибка", f"Не удалось загрузить файл: {e}")
             df = None
 
-
 def show_records(student_id):
     if df is not None:
         filtered_df = df[df['дата'] == student_id]
@@ -30,7 +29,6 @@ def show_records(student_id):
             messagebox.showwarning("Предупреждение", "Записи с указанной датой не найдены.")
     else:
         messagebox.showwarning("Предупреждение", "Сначала загрузите файл.")
-
 
 def add_record():
     global df
@@ -46,7 +44,6 @@ def add_record():
             new_record = [date, student_id, name, group, discipline, grade]
             df.loc[len(df)] = new_record
 
-            # Сохранение DataFrame в текстовый файл
             file_path = "records.txt"
             with open(file_path, 'a', encoding='utf-8') as file:
                 file.write(','.join(new_record) + '\n')
@@ -56,7 +53,6 @@ def add_record():
             messagebox.showwarning("Предупреждение", "Пожалуйста, заполните все поля.")
     else:
         messagebox.showwarning("Предупреждение", "Сначала загрузите файл.")
-
 
 def print_file():
     global df
@@ -75,9 +71,6 @@ def print_file():
         messagebox.showinfo("Успех", "Файл успешно напечатан!")
     else:
         messagebox.showwarning("Предупреждение", "Сначала загрузите файл.")
-
-
-
 
 def create_gui():
     global df
@@ -105,7 +98,6 @@ def create_gui():
     btn_print.grid(row=4, column=0, padx=5, pady=5, sticky="ew")
 
     root.mainloop()
-
 
 if __name__ == "__main__":
     create_gui()

@@ -28,8 +28,6 @@ class Vector:
     def __str__(self):
         return str(self.elements)
 
-
-# Пример использования
 vector1 = Vector([1, 3, 5, 7, 9])
 vector2 = Vector([2, 4, 6, 8, 10])
 

@@ -3,13 +3,13 @@ import numpy as np
 
 
 def plot_function(a, b, c, step):
-    x = np.arange(0, 1, step)
-    y = a * np.tan(b * x) + c
+    x = np.arange(0.01, 1, step)  # Избегаем значения x равного 0
+    y = (a ** 2) / ((b * x + c) ** 2)
 
     plt.plot(x, y)
     plt.xlabel('X')
     plt.ylabel('Y')
-    plt.title('График функции y = {} * tan({} * x) + {}'.format(a, b, c))
+    plt.title('График функции y = {}^2 / ({} * x + {})^2'.format(a, b, c))
     plt.grid(True)
     plt.show()
 

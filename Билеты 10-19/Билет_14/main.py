@@ -18,7 +18,6 @@ def read_file():
             messagebox.showerror("Ошибка", f"Не удалось загрузить файл: {e}")
             df = None
 
-
 def show_records(student_id):
     if df is not None:
         filtered_df = df[df['МДК'] == student_id]
@@ -30,7 +29,6 @@ def show_records(student_id):
             messagebox.showwarning("Предупреждение", "Записи с указанным МДК не найдены.")
     else:
         messagebox.showwarning("Предупреждение", "Сначала загрузите файл.")
-
 
 def add_record():
     global df
@@ -57,7 +55,6 @@ def add_record():
     else:
         messagebox.showwarning("Предупреждение", "Сначала загрузите файл.")
 
-
 def print_file():
     global df
     if df is not None:
@@ -75,9 +72,6 @@ def print_file():
         messagebox.showinfo("Успех", "Файл успешно напечатан!")
     else:
         messagebox.showwarning("Предупреждение", "Сначала загрузите файл.")
-
-
-
 
 def create_gui():
     global df
@@ -105,7 +99,6 @@ def create_gui():
     btn_print.grid(row=4, column=0, padx=5, pady=5, sticky="ew")
 
     root.mainloop()
-
 
 if __name__ == "__main__":
     create_gui()

@@ -28,8 +28,8 @@ class Polynom:
 
 
 if __name__ == "__main__":
-    poly1 = Polynom([1, 2, 3])  # 3x^2 + 2x + 1
-    poly2 = Polynom([0, -1, 2])  # 2x - 1
+    poly1 = Polynom([1, 2, 3])
+    poly2 = Polynom([0, -1, 2])
 
     sum_poly = poly1 + poly2
     print("Сумма полиномов:", sum_poly)

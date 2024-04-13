@@ -31,7 +31,6 @@ class Queue:
             self.items.append(first_item)
 
 
-# Пример использования
 queue = Queue()
 queue.enqueue(4)
 queue.enqueue(2)

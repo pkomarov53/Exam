@@ -9,7 +9,7 @@ def plot_function(a, b, c, step):
     plt.plot(x, y)
     plt.xlabel('X')
     plt.ylabel('Y')
-    plt.title('y = a * arctan(b * x) + c')
+    plt.title('График функции y = a * arctan(b * x) + c')
     plt.grid(True)
     plt.show()
 

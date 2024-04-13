@@ -4,12 +4,12 @@ import numpy as np
 
 def plot_function(a, b, c, step):
     x = np.arange(0, 1, step)
-    y = a * np.tan(b * x) + c
+    y = a / (b * 2 * x + c)
 
     plt.plot(x, y)
     plt.xlabel('X')
     plt.ylabel('Y')
-    plt.title('График функции y = {} * tan({} * x) + {}'.format(a, b, c))
+    plt.title('График функции y = {} / ({} * 2x + {})'.format(a, b, c))
     plt.grid(True)
     plt.show()
 

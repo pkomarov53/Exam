@@ -8,7 +8,7 @@ def plot_function(a, b, step):
     plt.plot(x, y)
     plt.xlabel('X')
     plt.ylabel('Y')
-    plt.title('y = a * sin(x) + b')
+    plt.title('График функции y = a * sin(x) + b')
     plt.grid(True)
     plt.show()
 
